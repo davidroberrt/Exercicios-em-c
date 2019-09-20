@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+//declarando variáveis:
+    int ladoA, ladoB, ladoC;
+
+//interagindo com o usuário e recebendo valores:
+    printf("Digite o tamanho do lado A:");
+    scanf("%d", &ladoA);
+    printf("Digite o tamanho do lado B:");
+    scanf("%d", &ladoB);    
+    printf("Digite o tamanho do lado C:");
+    scanf("%d", &ladoC);
+
+//Respeitando todas as regras da fórmula:
+    if (ladoA < (ladoB+ladoC) && ladoB < (ladoA+ladoC) && ladoC < (ladoA+ladoB) && (ladoB-ladoC) < ladoA && (ladoA-ladoC) < ladoB && (ladoA-ladoB) < ladoC){
+        int perimetro = ladoA+ladoB+ladoC; // declarando variável e somando o valor do perimetro
+        printf("é um triângulo e o valor do perímetro do triângulo é: %d", perimetro);
+    }
+    else{
+    printf("Não é um triângulo.");
+    }
+    return 0;
+}
