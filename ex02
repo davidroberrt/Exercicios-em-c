@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+    char opcao;
+    int valor1, valor2, valor3;
+
+    printf("digite sua opção letra 'd' para decrescente ou 'c' para crescente: ");
+    scanf("%s", &opcao);
+
+    printf("\nDigite um valor: ");
+    scanf("%d", &valor1);
+    printf("\nDigite outro valor: ");
+    scanf("%d", &valor2);
+    printf("\ndigite mais um valor: ");
+    scanf("%d", &valor3);
+
+
+    switch(opcao){
+        case 'c':
+           printf("\n%d\n%d\n%d\n", valor1, valor2, valor3);
+           break;
+        case 'd':
+           printf("\n%d\n%d\n%d\n", valor3, valor2, valor1);
+           break;
+        default:
+           printf("Não deu");
+           
+    }
+return 0;
+}
+// se o codigo for c em ordem decrescente,
+// se for d em ordem crescente.
